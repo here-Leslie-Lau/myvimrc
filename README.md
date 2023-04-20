@@ -5,4 +5,4 @@ vim writes the golang configuration
 
 ## screenshot
 
-![](https://github.com/here-Leslie-Lau/myvimrc/blob/master/images/Screen Shot 2023-04-20 at 20.45.08.png)
+![](https://github.com/here-Leslie-Lau/myvimrc/blob/master/images/Sample.png)
