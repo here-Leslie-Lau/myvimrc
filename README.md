@@ -5,4 +5,10 @@ vim writes the golang configuration
 
 ## screenshot
 
+Sample:
+
 ![](https://github.com/here-Leslie-Lau/myvimrc/blob/master/images/Sample.png)
+
+Go language coding example:
+
+![](https://github.com/here-Leslie-Lau/myvimrc/blob/master/images/go_code_demo.png)
