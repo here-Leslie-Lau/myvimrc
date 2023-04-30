@@ -47,8 +47,8 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " go 中的代码追踪，输入 gd 就可以自动跳转
 Plug 'dgryski/vim-godef'
 " 下面两个插件要配合使用，可以自动生成代码块
-"Plug 'SirVer/ultisnips'
-"Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips'
+Plug 'honza/vim-snippets'
 " 查看当前代码文件中的变量和函数列表的插件，
 " 可以切换和跳转到代码中对应的变量和函数的位置
 " 大纲式导航, Go 需要 https://github.com/jstemmer/gotags 支持
@@ -63,6 +63,8 @@ Plug 'zivyangll/git-blame.vim'
 
 " markdown插件
 Plug 'iamcco/markdown-preview.vim'
+
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -91,6 +93,8 @@ syntax enable
 syntax on                    " 开启文件类型侦测
 filetype plugin indent on    " 启用自动补全
 
+set encoding=UTF-8
+
 " 退出插入模式指定类型的文件自动保存
 au InsertLeave *.go,*.php write
 
@@ -112,8 +116,10 @@ set noswapfile
 " 开启24bit的颜色，开启这个颜色会更漂亮一些
 set termguicolors
 " 配色方案, 可以从上面插件安装中的选择一个使用
-colorscheme gruvbox " 主题
+colorscheme one " 主题
 set background=dark " 主题背景 dark-深色; light-浅色
+
+let g:airline_theme='one'
 
 set guifont=Roboto\ Mono\ Medium\ for\ Powerline:h16
 set lines=35 columns=118
@@ -225,6 +231,7 @@ noremap <c-z> <NOP>
 let g:ycm_semantic_triggers =  {
 \ 'c,cpp,python,java,go,erlang,perl': ['re!\w{2}'],
 \ 'cs,lua,javascript': ['re!\w{2}'],
+\ 'html': ['re!\w{2}'],
 \ }
 
 nmap <F4> :TagbarToggle<CR>
@@ -262,3 +269,6 @@ let g:tagbar_type_go = {
 let g:tagbar_ctags_bin = '/opt/homebrew/bin/ctags'
 
 nnoremap <Leader>g :<C-u>call gitblame#echo()<CR>
+
+let g:UltiSnipsExpandTrigger="<c-o>"
+
